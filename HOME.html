@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>EL FARO - Periódico local</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="Imagenes/FavFar.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet"type="text/css" href="home.css">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">-->
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+   </head>
+   </head>
+     <body class= "bdcolor">
+      <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-between sticky-top">
+<audio src="audio.mp3"></audio>
+<!-- logo -->
+      <a class="navbar-brand" href="#">
+        <img src="Imagenes/LogoEF.png" alt="logo" style="width:190px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+<!-- Links del Nav -->
+      <div class="topnav" id="navbarSupportedContent">
+        <ul class="navbar-nav navbar-light">
+          <li class="nav-item">
+            <a class="nav-link" href="#Inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Deporte">Deporte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Noticias">Negocio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#PiePagina">Contacto</a>
+          </li>
+		  <div class="login-container">
+         <form action="/action_page.php">
+          <input type="text" placeholder="Username" name="username">
+         <input type="text" placeholder="Password" name="psw">
+         <button type="submit">Login</button>
+        </form>
+              </div>
+         </ul>
+        </div>
+    </nav>
+<!-- Fecha y hora -->
+<h3><marquee>Santiago
+<script>
+//<![CDATA[
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+document.write(day + "/" + month + "/" + year);
+
+function startTime(){
+today=new Date();
+h=today.getHours();
+m=today.getMinutes();
+s=today.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);}
+function checkTime(i)
+{if (i<10) {i="0" + i;}return i;}
+window.onload=function(){startTime();}
+</script>
+<div id="reloj" style="font-size:60px;"></div>
+</marquee></h3>
+
+<!-- Carrosel -->
+
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+<!-- Indicaciones carrosel -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+  
+<!-- The slideshow -->
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+           <img src="Imagenes/Viajes.jpg" alt="Viajes" width="1100" height="300">
+          </div>
+          <div class="carousel-item">
+          <img src="Imagenes/Saludable.jpg" alt="Saludable" width="1100" height="300">
+          </div>
+          <div class="carousel-item">
+          <img src="Imagenes/Negocios.jpg" alt="Negocios" width="1100" height="300">
+          </div>
+       </div>
+  
+<!-- Controles izquierdo y derecho -->
+       <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+       </a>
+       <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+       </a>
+      </div>
+
+<!-- Titulos -->
+      <div class="container-fluid">
+            <div class="row bgTitulo">
+              <div class="col-12">
+                <h1 class="text-center p-3">Revista El Faro</h1>
+              </div>
+            </div>
+      </div>
+
+<!-- Galeria -->   
+      <div class= "Container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class= "card-columns" id="galeria" >
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card border-light mb-3" style="width: 25rem;">
+              <div class="card-body">
+                <h3 class="card-title">Revista El Faro</h3>
+                <h6 class="card-subtitle mb-2 text-muted">Segunda vista</h6>
+                <p class="card-text">Revista El Faro es un espacio con el objetivo es comunicar temas relacionados con el desarrollo de las ciencias 
+                  artes y la educación, con la finalidad de compartir el conocimiento y despertar el interés e 
+                  inquietud de sus lectores por las diversas áreas del saber en las regiones. ...</p>
+                <a href="#" class="btn btn-outline-dark">Registrarse</a>
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal" data-whatever="promociones">¿Quieres recibir promociones?</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+
+<!-- Modal de Subcripción a promociones -->  
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Susbcripción de promociones.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Email:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">Cuentanos que tipo de promoción te gustaría recibir :</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Enviar solicitud</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Titulo Inicio -->      
+        <div class="container-fluid ">
+          <div class="row bgTitulo">
+		  <p id="Inicio">
+            <div class="col-12">
+              <h1 class="text-center p-3" >Inicio</h1>
+              </div>
+            </div>
+        </div>
+
+	  <div class="support-grid"></div>
+
+  <div class="band">
+    <div class="item-1">
+          <a href="https://design.tutsplus.com/articles/international-artist-feature-malaysia--cms-26852" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"></div>
+            <article>
+              <h3>Característica del artista internacional: Malasia</h3>
+              <span>VillaMonte</span>
+            </article>
+          </a>
+    </div>
+    <div class="item-2">
+          <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png);"></div>
+            <article>
+              <h3>Cómo realizar pruebas de usabilidad remotas</h3>
+              <span>VillaMonte</span>
+            </article>
+          </a>
+    </div>
+    <div class="item-3">
+      <a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724" class="card">
+        <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);"></div>
+        <article>
+          <h3>Creado por ti, edición de julio</h3>
+          <p>¡Bienvenido a nuestra función mensual de fantásticos resultados de tutoriales creados por usted!</p>
+          <span>VillaMonte</span>
+        </article>
+      </a>
+    </div>
+    <div class="item-4">
+          <a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/landing.png);"></div>
+            <article>
+              <h3>Cómo codificar un sitio web con desplazamiento "Alien Lander"</h3>
+              <p>Vamos a armar todo para que, a medida que te desplazas hacia abajo desde la parte superior de la página, veas un "Alien Lander" acercándose a aterrizar.</p>
+              <span>VillaMonte</span>
+            </article>
+          </a>
+    </div>
+    <div class="item-5">
+          <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/strange.jpg);"></div>
+            <article>
+              <h3>Cómo crear un efecto de texto "Cosas más extrañas" en Adobe Photoshop</h3>
+              <span>VillaMonte</span>
+            </article>
+          </a>
+    </div>
+    <div class="item-6">
+      <a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338" class="card">
+        <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg);"></div>
+        <article>
+          <h3>5 retratos de negocios inspiradores y cómo hacer el tuyo</h3>
+          <span>VillaMonte</span>
+        </article>
+      </a>
+    </div>
+    <div class="item-7">
+      <a href="https://webdesign.tutsplus.com/articles/notes-from-behind-the-firewall-the-state-of-web-design-in-china--cms-22281" class="card">
+        <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/china.png);"></div>
+        <article>
+          <h3>Notas desde detrás del cortafuegos: el estado del diseño web en China</h3>
+          <span>VillaMonte</span>
+        </article>
+      </a>
+    </div>
+	    <div class="item-8">
+        <article>
+          <h3>Nueva Noticia</h3>
+           <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Titulo:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">Cuerpo de la noticia:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+				
+				<input type="button" class="btn btn-primary" value="Guargar noticia" />
+            </form>
+        </article>
+      </a>
+    </div>
+  </div>
+
+  
+<!--Pie de página --> 
+        <footer class="container-fluid">
+          <div class="row">
+		   <p id="PiePagina">
+            <div class="col-sm-3">
+                <h4>El Mercado</h4>
+                <p >Despachos</p>
+                <p>Formas de pago</p>
+                <p>Términos y condiciones</p>
+                <p>Nosotros</p>
+                <p>Comunidad</p>
+            </div>
+          <div class="col-sm-3">
+                <h4>Mi Cuenta</h4>
+                <p>Información personal</p>
+                <p>Pedidos</p>
+                <p>Direcciones</p>
+                <p>Promociones y descuentos</p>
+          </div>
+          <div class="col-sm-3">
+                <h4>Ubicación</h4>
+                <p><spam class="fa fa-map-marker"></spam> Providencia, Santiago de Chile</p>
+                <p><spam class="fa fa-mobile"></spam> + 569 5555 44444</p>
+                <p><spam  class="fa fa-clock-o"></spam> Lunes a Viernes: 9:00 a 18:00 hrs</p>
+                <p><spam class="fa fa-envelope"></spam> contacto@mercardomagico.com</p>  
+          </div>
+          <div class="col-sm-3">
+                <div> 
+                    <h4>Síguenos en:</h4>  
+                    <a href="https://www.facebook.com/" ><spam class="fa fa-facebook-square icon-success"></spam></a>
+                    <a href="https://www.youtube.com/" ><spam class="fa fa-youtube-play icon-success"></spam></a>
+                    <a href="https://www.instagram.com/"><spam class="fa fa-instagram icon-success"></spam></a>
+                <div>
+                    </br>
+                    <img src="Imagenes/Icon-Footer-Faro.png" alt="Icon" style="width:230px; height:210px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+     </body>
+
+<!-- script galeria --> 
+  <script type="text/javascript" src="home.js"></script>
+</html>
